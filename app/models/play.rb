@@ -1,5 +1,6 @@
 class Play < ActiveRecord::Base
   require "rexml/document"
+  has_many :roles
 
   def self.upload(file)
     xml_file = File.read(file.path)
@@ -9,7 +10,6 @@ class Play < ActiveRecord::Base
       location.title = element.text
       location.save!
     end
-    
   end
 
 end
