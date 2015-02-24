@@ -2,3 +2,12 @@
 <% @plays.each do |play|%>
   <%= play.title %>
 <%end%>
+
+<div class="large-4 columns">
+  <h5>Upload Play</h5>
+
+  <%= form_tag upload_plays_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Upload", class: "button tiny" %>
+  <% end %>
+</div>
