@@ -9,6 +9,7 @@ class Play < ActiveRecord::Base
       location.title = element.text
       location.save!
     end
+    
   end
 
 end
