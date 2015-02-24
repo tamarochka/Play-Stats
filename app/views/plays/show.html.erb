@@ -1,0 +1,12 @@
+<h3>Play Statistics for: <%= @play.title%></h3>
+
+<table>
+  <tr>
+    <th>Role</th>
+  </tr>
+  <tr>
+  <% @roles.each do |role| %>
+    <td><%= role.name %></td>
+  </tr>
+  <%end%>
+</table>

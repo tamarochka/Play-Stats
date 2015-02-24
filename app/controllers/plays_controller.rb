@@ -8,4 +8,10 @@ class PlaysController < ApplicationController
     flash[:notice]= "Play Uploaded"
     redirect_to root_url
   end
+
+  def show
+    @play = Play.find(params[:id])
+    @roles = @play.roles
+  end
+  
 end
