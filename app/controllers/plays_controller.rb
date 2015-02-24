@@ -13,5 +13,5 @@ class PlaysController < ApplicationController
     @play = Play.find(params[:id])
     @roles = @play.roles
   end
-  
+
 end
