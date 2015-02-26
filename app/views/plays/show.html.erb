@@ -8,10 +8,9 @@
   <tr>
   <% @roles.each do |role| %>
     <td><%= role.name %></td>
-    <td><%= role.speeches.count %></td>
+    <td><%= role.lines.count %></td>
+    <td><%= role.longest_speech %></td>
 
   </tr>
   <%end%>
-  <% @role = Role.find_by(name: "JULIUS CAESAR")%>
-  <%= @role.lines.count%>
 </table>

@@ -11,7 +11,7 @@ class PlaysController < ApplicationController
 
   def show
     @play = Play.find(params[:id])
-    @roles = Role.all
+    @roles = @play.roles
   end
 
 end
