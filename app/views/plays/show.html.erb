@@ -3,10 +3,15 @@
 <table>
   <tr>
     <th>Role</th>
+    <th>Number of lines</th>
   </tr>
   <tr>
   <% @roles.each do |role| %>
     <td><%= role.name %></td>
+    <td><%= role.speeches.count %></td>
+
   </tr>
   <%end%>
+  <% @role = Role.find_by(name: "JULIUS CAESAR")%>
+  <%= @role.lines.count%>
 </table>

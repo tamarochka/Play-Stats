@@ -32,6 +32,23 @@ class Play < ActiveRecord::Base
         scene.name = scene_element.elements["TITLE"].text
         scene.play = @play
         scene.save!
+        scene_element.elements.each("SPEECH") do |speech_element|
+          speaker = speech_element.elements["SPEAKER"].text
+
+          if !Role.find_by(name: speaker).nil?
+            speech = Speech.new
+            speech.role = Role.find_by(name: speaker)
+            speech.scene = scene
+            speech.save!
+
+            speech_element.elements.each("LINE") do |line_element|
+              line = Line.new
+              line.speech = speech
+              line.body = line_element.text
+              line.save!
+            end
+          end
+        end
       end
     end
   end
