@@ -35,9 +35,9 @@ class Play < ActiveRecord::Base
         scene_element.elements.each("SPEECH") do |speech_element|
           speaker = speech_element.elements["SPEAKER"].text
 
-          if !Role.find_by(name: speaker).nil?
+          if !@play.roles.find_by(name: speaker).nil?
             speech = Speech.new
-            speech.role = Role.find_by(name: speaker)
+            speech.role = @play.roles.find_by(name: speaker)
             speech.scene = scene
             speech.save!
 

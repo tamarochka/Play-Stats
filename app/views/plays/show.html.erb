@@ -4,12 +4,16 @@
   <tr>
     <th>Role</th>
     <th>Number of lines</th>
+    <th>Longest Speech</th>
+    <th>Number of Scenes</th>
   </tr>
   <tr>
   <% @roles.each do |role| %>
     <td><%= role.name %></td>
     <td><%= role.lines.count %></td>
     <td><%= role.longest_speech %></td>
+    <td><%= role.scenes_number %></td>
+    <td><%= role.percentage_of_scenes%></td>
 
   </tr>
   <%end%>
