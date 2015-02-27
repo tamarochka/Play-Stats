@@ -1,6 +1,7 @@
 <h3>Play Statistics for: <%= @play.title%></h3>
 
-<table>
+<table id="play_table">
+  <thead>
   <tr>
     <th>Role</th>
     <th>Number of lines</th>
@@ -8,6 +9,8 @@
     <th>Number of Scenes</th>
     <th> Percentage of all Scenes</th>
   </tr>
+  </thead>
+  <tbody>
   <tr>
   <% @roles.each do |role| %>
     <td><%= role.name %></td>
@@ -18,4 +21,5 @@
 
   </tr>
   <%end%>
+</tbody>
 </table>
