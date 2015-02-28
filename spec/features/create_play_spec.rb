@@ -9,19 +9,20 @@ feature 'user creates play', %Q{
 
     visit plays_path
 
-    attach_file "Example", File.join(Rails.root, "spec/support/files/example.xml")
+    attach_file "File", File.join(Rails.root, "spec/support/files/example.xml")
 
     click_button 'Upload'
 
-    expect(page).to have_content('Uploaded')
+    expect(page).to have_content("Play Uploaded")
     expect(Play.count).to eq(1)
   end
 
-  # scenario 'specify invalid credentials' do
-  #   visit new_user_session_path
-  #
-  #   click_button 'Log in'
-  #   expect(page).to have_content('Invalid email or password')
-  #   expect(page).to_not have_content('Sign Out')
-  # end
+  scenario 'specify invalid credentials' do
+    visit plays_path
+
+    click_button 'Upload'
+
+    expect(page).to have_content('Please attach file')
+    expect(Play.count).to eq(0)
+  end
 end

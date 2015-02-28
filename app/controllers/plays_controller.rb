@@ -4,8 +4,12 @@ class PlaysController < ApplicationController
   end
 
   def upload
-    Play.upload(params[:file])
-    flash[:notice]= "Play Uploaded"
+    if params[:file].nil?
+      flash[:notice] = "Please attach file"
+    else
+      Play.upload(params[:file])
+      flash[:notice]= "Play Uploaded"
+    end
     redirect_to root_url
   end
 
