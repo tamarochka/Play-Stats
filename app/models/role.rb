@@ -3,6 +3,7 @@ class Role < ActiveRecord::Base
   has_many :speeches
   has_many :lines, through: :speeches
   has_many :scenes, through: :speeches
+  validates :name, presence: true
 
   def longest_speech
     line_count = 0

@@ -2,6 +2,7 @@ class Play < ActiveRecord::Base
   require "rexml/document"
   has_many :roles
   has_many :scenes
+  validates :title, presence: true
 
   def self.upload(file)
     xml_file = File.read(file.path)

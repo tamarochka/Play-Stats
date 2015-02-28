@@ -10,4 +10,44 @@
       This work may be freely copied and distributed worldwide.
     </P>
   </FM>
+  <PERSONAE>
+    <TITLE>Dramatis Personae</TITLE>
+    <PERSONA>JULIUS CAESAR</PERSONA>
+    <PERSONA>CASCA</PERSONA>
+  </PERSONAE>
+  <PLAYSUBT>JULIUS CAESAR</PLAYSUBT>
+  <ACT>
+    <TITLE>ACT I</TITLE>
+    <SCENE>
+      <TITLE>SCENE I. Rome. A street.</TITLE>
+      <STAGEDIR>Enter FLAVIUS, MARULLUS, and certain Commoners</STAGEDIR>
+      <SPEECH>
+        <SPEAKER>JULIUS CAESAR</SPEAKER>
+        <LINE>Hence! home, you idle creatures get you home:</LINE>
+        <LINE>Is this a holiday? what! know you not,</LINE>
+      </SPEECH>
+      <SPEECH>
+        <SPEAKER>CASCA</SPEAKER>
+        <LINE>Why, sir, a carpenter.</LINE>
+      </SPEECH>
+      <SPEECH>
+        <SPEAKER>MARULLUS</SPEAKER>
+        <LINE>Where is thy leather apron and thy rule?</LINE>
+      </SPEECH>
+    </SCENE>
+    <SCENE>
+      <TITLE>SCENE II. A public place.</TITLE>
+      <STAGEDIR>
+        Flourish. Enter CAESAR; ANTONY, for the course; CALPURNIA, PORTIA, DECIUS BRUTUS, CICERO, BRUTUS, CASSIUS, and CASCA; a great crowd following, among them a Soothsayer
+      </STAGEDIR>
+      <SPEECH>
+        <SPEAKER>JULIUS CAESAR</SPEAKER>
+        <LINE>Calpurnia!</LINE>
+      </SPEECH>
+      <SPEECH>
+        <SPEAKER>CASCA</SPEAKER>
+        <LINE>Peace, ho! Caesar speaks.</LINE>
+      </SPEECH>
+    </SCENE>
+  </ACT>
 </PLAY>
