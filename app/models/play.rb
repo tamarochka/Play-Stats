@@ -46,7 +46,7 @@ class Play < ActiveRecord::Base
             speech_element.elements.each("LINE") do |line_element|
               line = Line.new
               line.speech = speech
-              line.body = line_element.text
+              line.body = line_element.texts
               line.save!
             end
           end
