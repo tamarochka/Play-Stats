@@ -6,6 +6,7 @@ class Play < ActiveRecord::Base
 
   def self.upload(file)
     xml_file = File.read(file.path)
+    xml_file.gsub!(/&(?!(?:amp|lt|gt|quot|apos);)/, '&amp;')
     @doc = REXML::Document.new(xml_file)
     @doc.elements.each('PLAY/TITLE') do |element|
       @play = new
